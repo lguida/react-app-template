@@ -1,43 +1,14 @@
+import { Heading, HStack, Box } from "@chakra-ui/react";
+
 export function Root() {
     return (
-      <>
-        <div id="sidebar">
-          <h1>React Router Contacts</h1>
-          <div>
-            <form id="search-form" role="search">
-              <input
-                id="q"
-                aria-label="Search contacts"
-                placeholder="Search"
-                type="search"
-                name="q"
-              />
-              <div
-                id="search-spinner"
-                aria-hidden
-                hidden={true}
-              />
-              <div
-                className="sr-only"
-                aria-live="polite"
-              ></div>
-            </form>
-            <form method="post">
-              <button type="submit">New</button>
-            </form>
-          </div>
-          <nav>
-            <ul>
-              <li>
-                <a href={`/contacts/1`}>Your Name</a>
-              </li>
-              <li>
-                <a href={`/contacts/2`}>Your Friend</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
-        <div id="detail"></div>
-      </>
+      <Box w='100%' h='15%' bg='tomato' color='white'>
+        <Heading as='h1' my='15px' mx='20px'>Family Photos Tree App</Heading>
+        <HStack spacing='24px' justifyContent='center'>
+            <Box>Search</Box>
+            <Box>Tree</Box>
+            <Box>Settings</Box>
+        </HStack>
+      </Box> 
     );
   }
